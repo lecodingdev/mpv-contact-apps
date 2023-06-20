@@ -1,0 +1,11 @@
+{
+    "contacts" : [
+        {
+            "name" : "Kyo True",
+            "email" : "kyotrue@gmail.com",
+            "phonenumber" : "082134434403",
+            "category" : "family",
+            "id" : 1
+        }
+    ]
+}
