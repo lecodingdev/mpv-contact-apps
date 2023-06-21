@@ -6,6 +6,13 @@
       "phonenumber": "082134434403",
       "category": "family",
       "id": 1
+    },
+    {
+      "name": "pisang goreng",
+      "email": "pisang_goreng@gmail.com",
+      "phonenumber": "082176646606",
+      "category": "friend",
+      "id": 2
     }
   ]
 }

@@ -7,7 +7,7 @@ export default function AddContact() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
-    const [category, setCategory] = useState("");
+    const [category, setCategory] = useState("family");
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -26,7 +26,7 @@ export default function AddContact() {
         setName("")
         setEmail("")
         setPhone("")
-        setCategory("family")
+        setCategory("")
     }
 
   return (
@@ -60,19 +60,19 @@ export default function AddContact() {
             </div>
             <form onSubmit={handleSubmit}>
               <div className="modal-body">
-                <div className="form-group">
+                <div className="form-group mt-1">
                   <label htmlFor="name">Name</label>
                   <input value={name} onChange={(e)=>setName(e.target.value)} type="text" className="form-control mt-1" />
                 </div>
-                <div className="form-group">
+                <div className="form-group mt-1">
                   <label htmlFor="email">Email</label>
                   <input value={email} onChange={(e)=>setEmail(e.target.value)} type="email" className="form-control mt-1" />
                 </div>
-                <div className="form-group">
+                <div className="form-group mt-1">
                   <label htmlFor="phone">Phone Number</label>
                   <input value={phone} onChange={(e)=>setPhone(e.target.value)} type="Number" className="form-control mt-1" />
                 </div>
-                <div className="form-group">
+                <div className="form-group mt-1">
                   <label htmlFor="category">Category</label>
                   <select value={category} onChange={(e)=>setCategory(e.target.value)} name="category" className="form-control mt-1">
                     <option value="family">Family</option>

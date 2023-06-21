@@ -1,6 +1,7 @@
 const initialState = {
     allContact: [],
-    categoryContact: []
+    categoryContact: [],
+    detailContact: []
 }
 
 const contactReducer = (state = initialState, action) => {
@@ -9,6 +10,8 @@ const contactReducer = (state = initialState, action) => {
             return {...state, allContact:action.payload}
         case "CATEGORY_CONTACT":
             return {...state, categoryContact:action.payload}
+        case "DETAIL_CONTACT":
+            return {...state, detailContact:action.payload}
         default:
             return state;
     }
