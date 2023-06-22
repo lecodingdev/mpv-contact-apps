@@ -27,13 +27,13 @@ function CategoryContact() {
 
   return (
     <div className="container mt-3">
-      <div className="row">
         {
           loading ? 
             <Loading />
           : 
           categoryContact.length === 0 ?
-            <div className="text-center m-2 p-4"> Data Not Found </div>
+          <div className="text-center m-4 p-2 border border-white rounded">
+          <span className="text-white">Data Not Found</span></div>
           :
             categoryContact.map((contact) => {
               return(
@@ -44,7 +44,6 @@ function CategoryContact() {
             })
         }
       </div>
-    </div>
   );
 }
 

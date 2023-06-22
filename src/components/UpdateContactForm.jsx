@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Swal from "sweetalert2";
 
 import getDetailContact from "../redux/action/getDetailContact";
 import updateContact from "../redux/action/updateContact";
@@ -21,11 +22,20 @@ export default function UpdateContactForm(props) {
     setName("");
     setEmail("");
     setPhone("");
-    setCategory("");
+    setCategory("family");
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (name === "" || email === "" || phone === ""){
+      Swal.fire({
+        position: "top-end",
+        icon: "error",
+        timer: 3000,
+        showConfirmButton: false,
+        title: "Please Fill Form Update"
+    })
+    } else {
     dispatch(updateContact({
         user: {
             name,
@@ -34,6 +44,7 @@ export default function UpdateContactForm(props) {
             category
         }
     }, contact.id))
+  }
     resetForm()
   }
 

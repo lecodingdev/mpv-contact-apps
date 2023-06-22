@@ -14,7 +14,7 @@ const detailContact = (id) => {
                 position: 'top-end',
                 icon: 'error',
                 showConfirmButton: false,
-                timer: 1000,
+                timer: 2000,
                 title: `${err.message} - ${err.status}`
             })
         });

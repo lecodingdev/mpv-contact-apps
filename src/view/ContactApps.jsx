@@ -17,13 +17,13 @@ function ContactApps() {
   return (
     <>
       <div className="container mt-2">
-        <div className="row">
           {
             loading ?
             <Loading />
             :
             contacts.length === 0 ?
-            <div className="text-center m-4 p-2">Data Not Found</div>
+            <div className="text-center m-4 p-2 border border-white rounded">
+              <span className="text-white">Data Not Found</span></div>
             :
             contacts.map((contact)=>{
               return(
@@ -35,7 +35,6 @@ function ContactApps() {
             })
           }
         </div>
-      </div>
     </>
   );
 }

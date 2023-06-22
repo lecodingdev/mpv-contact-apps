@@ -19,7 +19,7 @@ const updateContact = ({user}, id) => {
                 position: "top-end",
                 icon: "success",
                 showConfirmButton: false,
-                timer: 1000,
+                timer: 2000,
                 title: `Success Update Contact ${data.name}`
             })
             dispatch(getAllContact())
@@ -28,7 +28,7 @@ const updateContact = ({user}, id) => {
                 position: "top-end",
                 icon: "err",
                 showConfirmButton: false,
-                timer: 1000,
+                timer: 2000,
                 title: `${err.message} - ${err.status}`
             })
         });

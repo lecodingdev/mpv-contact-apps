@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Swal from "sweetalert2";
 import { useDispatch } from "react-redux";
 import addContact from "../redux/action/addContact";
 
@@ -11,7 +12,16 @@ export default function AddContact() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        dispatch(addContact({
+        if (name === "" || email === "" || phone === ""){
+          Swal.fire({
+            position: "top-end",
+            icon: "error",
+            timer: 3000,
+            showConfirmButton: false,
+            title: "Please Fill Form Add Contact"
+        })
+        } else {
+          dispatch(addContact({
             user: {
                 name,
                 email,
@@ -19,6 +29,8 @@ export default function AddContact() {
                 category
             }
         }))
+        }
+        
         resetForm()
     }
 
@@ -26,7 +38,7 @@ export default function AddContact() {
         setName("")
         setEmail("")
         setPhone("")
-        setCategory("")
+        setCategory("family")
     }
 
   return (

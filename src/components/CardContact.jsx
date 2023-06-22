@@ -28,12 +28,15 @@ function CardContact(props) {
   }
 
   return (
-    <div className="card shadow-sm radius mt-3">
-      <div className="card-body">
-        <h5>{props.contact.name}</h5>
+    <div className="card shadow-sm radius mt-5">
+      <div className="box">
+      <div className="content">
+        <h2>{props.contact.id}</h2>
+        <h3>{props.contact.name}</h3>
         <p>{props.contact.email}</p>
         <p>{props.contact.phonenumber}</p>
         <p>category: {props.contact.category}</p>
+      </div>
       </div>
       {
         // eslint-disable-next-line react/prop-types

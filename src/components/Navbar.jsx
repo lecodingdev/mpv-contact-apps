@@ -4,7 +4,7 @@ import AddContact from "./AddContactForm";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-navbar">
       <div className="container-fluid">
         <Link to="/" className="navbar-brand">
           {" "}
@@ -32,17 +32,17 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/family" className="nav-link">
+              <Link to="/category/family" className="nav-link">
                 Family
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/friend" className="nav-link">
+              <Link to="/category/friend" className="nav-link">
                 Friend
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/work" className="nav-link">
+              <Link to="/category/work" className="nav-link">
                 Work
               </Link>
             </li>

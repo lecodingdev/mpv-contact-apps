@@ -18,7 +18,7 @@ const addContact = (({user}) => {
             Swal.fire({
                 position: "top-end",
                 icon: "success",
-                timer: 1000,
+                timer: 2000,
                 showConfirmButton: false,
                 title: `Success add contact ${data.name}`
             })
@@ -27,7 +27,7 @@ const addContact = (({user}) => {
             Swal.fire({
                 position: "top-end",
                 icon: "error",
-                timer: 1000,
+                timer: 2000,
                 showConfirmButton: false,
                 title: `${err.message} - ${err.status}`
             })

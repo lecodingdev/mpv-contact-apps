@@ -15,7 +15,7 @@ const deleteContact = (id) => {
                 position: "top-end",
                 icon: "success",
                 showConfirmButton: false,
-                timer: 1000,
+                timer: 2000,
                 title: "Your ontact has been deleted"
             })
             dispatch(getAllContact())
@@ -24,7 +24,7 @@ const deleteContact = (id) => {
                 position: "top-end",
                 icon: "error",
                 showConfirmButton: false,
-                timer: 1000,
+                timer: 2000,
                 title: `${err.message} - ${err.status}`
         })
     });
